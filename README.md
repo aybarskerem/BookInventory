@@ -1,12 +1,29 @@
 # BookInventory
 - A simple Django Rest API project with a simple front-end, drf backend,
-  Swagger-ui &amp; ReDoc documentation and Docker support.  
+  Swagger UI &amp; ReDoc documentation and Docker support.  
+
+## How to run:
+- Please run `python manage.py migrate` before everything to make sure
+migration of the db is complete.
+  
+### To run in a local computer without containerization:
+- `cd Library`  
+- `pip install -r requirements.txt`    
+- `python manage.py runserver`    
+
+### To run in a Docker container:
+- `cd Library`  
+- `docker-compose build`    
+- `docker-compose up`    
+
+## Requirements:
+- Library/requirements.txt
+- Currently only tested on Ubuntu 20.04.
 
 ## Non-API Pages (URLs):
 - http://localhost:8000/ to see all the books listed. Then any of the books 
 can be clicked on to see its details. This url is also the root page. To list
 a book, firstly, books have to be created using [the API pages](#api-pages-(urls):).  
-
 ## API Pages (URLs):
 - http://localhost:8000/api/schema/ to download the schema in yaml format.  
 - http://localhost:8000/api/schema/swagger-ui/ to see a Swagger-UI formatted
@@ -18,17 +35,13 @@ documentation.
   
 Note that, in the API documentation pages, documentations for GET, POST, PATCH,
 PUT and DELETE requests for the BookInventory can be seen. Moreover, in 
-Swagger-UI for example, making a query is quite easy with example formats.    
+Swagger UI for example, making a query is quite easy with example formats.    
 
 ## Query Functionality:
 - To filter the author names including 'tol' and book titles with 'peace' for
 example, we can add our query appending a '?' to the root page and doing our 
 queries like:  
     - http://localhost:8000?author=tol&title=peace
-
-## To run in a Docker container:
-- `docker-compose build`  
-- `docker-compose up`  
 
 ## Keywords:
 - Django
