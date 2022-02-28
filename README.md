@@ -3,16 +3,15 @@
   Swagger UI &amp; ReDoc documentation and Docker support.  
 
 ## How to run:
-- Please run `python manage.py migrate` before everything to make sure
-migration of the db is complete.
+- `cd Library`   
+- Then, please run `python manage.py migrate` before everything to make sure
+migration of the db is complete.  
   
 ### To run in a local computer without containerization:
-- `cd Library`  
 - `pip install -r requirements.txt`    
 - `python manage.py runserver`    
 
-### To run in a Docker container:
-- `cd Library`  
+### To run in a Docker container: 
 - `docker-compose build`    
 - `docker-compose up`    
 
