@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Book Inventory</title>
+</head>
+<body>
+    <h1>Welcome to our Library.</h1>
+    <h4>We have {{ books | length }} books that you might want to check out: </h4>
+    <ul>
+      {% for book in books %}
+        <li>
+          <a href="/books/{{ book.id }}/">{{ book }}</a>
+        </li>
+       
+      {% endfor %}
+    </ul>
+</body>
+</html>
