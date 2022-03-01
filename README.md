@@ -2,22 +2,35 @@
 - A simple Django Rest API project with a simple front-end, drf backend,
   Swagger UI &amp; ReDoc documentation and Docker support.  
 
+## Requirements:
+- Python 3.8.10 (`pip install` can be sensitive to specific version)  
+- Library/requirements.txt (`pip install -r requirements.txt`)  
+- Currently only tested on Ubuntu 20.04 and Windows 10.  
+  
 ## How to run:
 - `cd Library`   
-- Then, please run `python manage.py migrate` before everything to make sure
-migration of the db is complete.  
+   
+### To activate a virtual environment first (Optional Step):
+#### On Windows:  
+- `pip install virtualenv`  
+- `virtualenv venv -p <path to python3.8.10 exe>`
+- `venv\Scripts\activate`
+
+#### On Ubuntu (20.04):  
+- `pip install virtualenv`  
+- `virtualenv venv`  
+- `source venv/bin/activate`    
   
 ### To run in a local computer without containerization:
-- `pip install -r requirements.txt`    
+- `pip install -r requirements.txt`   
+- `python manage.py migrate`    
 - `python manage.py runserver`    
 
 ### To run in a Docker container: 
+- Firstly install Docker. (such as running `sudo apt install docker-compose` 
+etc on a Debian based system to install the 'compose' tool.)    
 - `docker-compose build`    
 - `docker-compose up`    
-
-## Requirements:
-- Library/requirements.txt
-- Currently only tested on Ubuntu 20.04.
 
 ## Non-API Pages (URLs):
 - http://localhost:8000/ to see all the books listed. Then any of the books 
